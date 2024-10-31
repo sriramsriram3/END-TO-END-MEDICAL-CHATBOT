@@ -16,6 +16,7 @@ def initialize_chroma_vector_store():
     )
     return vector_store
 
+
 vector_store=initialize_chroma_vector_store()
 uuids = [str(uuid4()) for _ in range(len(text_chunks))]
 vector_store.add_documents(documents=text_chunks, ids=uuids)

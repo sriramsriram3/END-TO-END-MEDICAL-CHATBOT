@@ -1,6 +1,7 @@
 # DATA INGESTION
 from langchain_community.document_loaders import DirectoryLoader
-from langchain.document_loaders import PyPDFLoader  
+from langchain_community.document_loaders import PyPDFLoader
+
 
 def extract_pdf(pdf):
     loader=DirectoryLoader(pdf,glob='*pdf',loader_cls=PyPDFLoader)

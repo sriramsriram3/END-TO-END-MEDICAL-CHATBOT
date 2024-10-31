@@ -1,9 +1,10 @@
 sentence-transformers==3.2.1
-langchain==0.3.4
+langchain==0.3.6
 flask==2.3.3
-langchain-community==0.3.3
+langchain-community==0.3.4
 pypdf
 langchain-chroma
 langchain-groq
-
+python-dotenv
+langchain-huggingface
 -e .

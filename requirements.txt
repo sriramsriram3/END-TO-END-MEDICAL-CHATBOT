@@ -1,4 +1,3 @@
-ctransformers==0.2.16
 sentence-transformers==3.2.1
 langchain==0.3.4
 flask==2.3.3
@@ -6,3 +5,5 @@ langchain-community==0.3.3
 pypdf
 langchain-chroma
 langchain-groq
+
+-e .

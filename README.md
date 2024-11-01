@@ -13,11 +13,11 @@ Project repo: https://github.com/
 ### STEP 01- Create a conda environment after opening the repository
 
 ```bash
-conda create -n mchatbot python=3.8 -y
+conda create -n medchat python=3.8 -y
 ```
 
 ```bash
-conda activate mchatbot
+conda activate medchat
 ```
 
 ### STEP 02- install the requirements
@@ -29,22 +29,20 @@ pip install -r requirements.txt
 ### Create a `.env` file in the root directory and add your Pinecone credentials as follows:
 
 ```ini
-PINECONE_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-PINECONE_API_ENV = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+ASTRADB_API_TOKEN = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+ASTRADB_END-POINT_API = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+GROQ_API_KEY="xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 ```
 
 
 ### Download the quantize model from the link provided in model folder & keep the model in the model directory:
 
 ```ini
-## Download the Llama 2 Model:
+## Download the Llama 2 Model from Groq cloud:
+  llama models - your choice
 
-llama-2-7b-chat.ggmlv3.q4_0.bin
 
 
-## From the following link:
-https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGML/tree/main
-```
 
 ```bash
 # run the following command
@@ -67,6 +65,6 @@ open up localhost:
 - Python
 - LangChain
 - Flask
-- Meta Llama2
-- Pinecone
+- Meta Llama2 from Groq
+- AstraDB
 

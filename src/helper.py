@@ -29,10 +29,10 @@ load_dotenv()
 
 # from your_library import ChatGroq  # Import ChatGroq from the library where it is implemented
 
-def llm_model(api_key: str):  # Securely retrieve API key from environment
+def llm_model(api_key: str,temperature):  # Securely retrieve API key from environment
     llm = ChatGroq(
         model="llama3-8b-8192",
-        temperature=0,
+        temperature=temperature,
         max_tokens=None,
         timeout=None,
         max_retries=2,

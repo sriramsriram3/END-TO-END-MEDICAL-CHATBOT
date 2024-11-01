@@ -26,19 +26,19 @@ qa=RetrievalQA.from_chain_type(
 # Create the Flask app
 app = Flask(__name__)
 
-# Route for the home page with form
-@app.route('/')
+@app.route("/")
 def index():
-    return render_template('templates/chat.html')
+    return render_template('chat.html')
 
-# Route to handle the query and get the response
-@app.route('/ask', methods=['POST'])
-def ask():
-    input_query = request.form.get('query')
-    result = qa.invoke({"query": input_query})
-    response = result["result"]
-    return jsonify({"response": response})
+@app.route("/get", methods=["GET", "POST"])
+def chat():
+    msg = request.form["msg"]
+    input = msg
+    print(input)
+    result=qa.invoke({"query": input})
+    print("Response : ", result["result"])
+    return str(result["result"])
 
-# Run the app
-if __name__ == "__main__":
-    app.run(debug=True)
+
+if __name__ == '__main__':
+    app.run(host="0.0.0.0", port= 8080, debug= True)
